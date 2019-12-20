@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="/stylesheets/middle.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/users/welcome">Hi-Hello</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+              <a class="nav-link" href="/users/middle">
+                Login/Signup
+              </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Current Events
+              </a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-light" href="#">Action</a>
+                <a class="dropdown-item text-light" href="#">Another action</a>
+                <a class="dropdown-item text-light" href="#">Something else here</a>
+              </div>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contactus">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container new">
+            <div class="row mt-5">
+                <div class="col-md-6 m-auto">
+                    <div class="card card-body">
+                      <h1 class="text-center mb-3">
+                        <i class="fas fa-user-plus"></i> Register
+                      </h1>
+                      <% include("./partials/messages") %>
+                      <form action="/users/register" method="POST">
+                        <div class="form-group">
+                          <label for="birthday">Birthday</label>
+                          <input
+                            type="date"
+                            id="birthday"
+                            name="birthday"
+                            class="form-control"
+                            placeholder="dd/mm/yyyy"
+                            value="<%= typeof name != 'undefined' ? name : '' %>"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="phone number">Phone Number</label>
+                          <input
+                            type="phonenumber"
+                            id="phonenumber"
+                            name="phonenumber"
+                            class="form-control"
+                            placeholder="Enter 10 digit phone number"
+                            value="<%= typeof name != 'undefined' ? name : '' %>"
+                          />
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input
+                              type="name"
+                              id="name"
+                              name="name"
+                              class="form-control"
+                              placeholder="Enter Name"
+                              value="<%= typeof name != 'undefined' ? name : '' %>"
+                            />
+                          </div>
+                          <div class="form-group">
+                              <label for="email">Email</label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Enter Email"
+                                value="<%= typeof email != 'undefined' ? email : '' %>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control"
+                                placeholder="Create Password"
+                                value="<%= typeof password != 'undefined' ? password : '' %>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="password2">Confirm Password</label>
+                              <input
+                                type="password"
+                                id="password2"
+                                name="password2"
+                                class="form-control"
+                                placeholder="Confirm Password"
+                                value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="gender">Gender</label>
+                              <br>
+                              <input
+                                type="radio"
+                                name="gender"
+                                value="Male"
+                              />Male
+                              <br>
+                              <input
+                                type="radio"
+                                name="gender"
+                                value="Female"
+                              />Female
+                              <br>
+                              <input
+                                type="radio"
+                                name="gender"
+                                value="Others"
+                              />Others
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                              Register
+                            </button>
+                      </form>
+                      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+                    </div>
+                </div>
+            </div>
+      </div>
