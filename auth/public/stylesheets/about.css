@@ -1,0 +1,18 @@
+body {
+    background-color: #263238;
+}
+
+.text {
+    padding-top: 10%;
+    justify-content: center;
+    color: #e0e0e0;
+}
+.para{
+    color: #e0e0e0;
+    padding-top: 1%;
+    font-size: 25px;
+}
+.our{
+    padding-top: 3%;
+    color: #e0e0e0;
+}
